@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  color: hsl(0, 0%, 100%);
+}
+
+body {
+  background: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  background: hsl(216, 50%, 16%);
+  min-width: 200px;
+  max-height: 800px;
+  border-radius: 20px;
+  padding: 1em;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header div {
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  top: 0;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background linear 0.2s;
+}
+
+header div img {
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  transition: opacity linear 0.2s;
+}
+
+header div:hover {
+  background: hsl(178, 100%, 50%, 0.4);
+}
+
+header div:hover img {
+  opacity: 1;
+}
+
+header img {
+  height: 100%;
+  width: 400px;
+  border-radius: 20px;
+}
+
+main {
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  margin-bottom: 20px;
+}
+
+main h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: color linear 0.2s;
+}
+
+main h1:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+main p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #8f8f8f;
+  margin-bottom: 10px;
+  width: 29ch;
+}
+
+main div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+main div span:first-child {
+  color: hsl(178, 100%, 50%);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  color: #8f8f8f;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+footer img {
+  width: 35px;
+  height: 100%;
+}
+
+footer p > span {
+  color: #fff;
+  transition: color linear 0.2s;
+}
+
+footer p > span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+@media (max-width: 374px) {
+  .container {
+    max-width: 350px;
+  }
+
+  header img {
+    max-width: -webkit-fill-available;
+  }
+
+  main h1 {
+    font-size: 1rem;
+  }
+
+  main p {
+    font-size: 0.9rem;
+  }
+
+  main div {
+    font-size: 0.85rem;
+  }
+}
